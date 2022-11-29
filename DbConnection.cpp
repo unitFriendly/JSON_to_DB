@@ -89,3 +89,8 @@ void DbConnection::ExecuteQuery(const char* sql)
 {
 	Db::ExecuteQuery(sql, _db, true);
 }
+
+void DbConnection::ExecuteQuery(const char* sql, int (*callback)(void*, int, char**, char**))
+{
+	Db::ExecuteQuery(sql, callback, _db, true);
+}

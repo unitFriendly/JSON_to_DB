@@ -43,6 +43,8 @@ public:
     void Close();
 
 	void ExecuteQuery(const char* sql);
+	void ExecuteQuery(const char* sql, int (*callback)(void*, int, char**, char**));
+
 	~DbConnection()
     {
 		if (m_isCloseOnDestory)

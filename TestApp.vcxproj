@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\unit\Downloads\TestApp\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,17 +140,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="App.cpp" />
     <ClCompile Include="Db.cpp" />
     <ClCompile Include="DbConnection.cpp" />
     <ClCompile Include="libs\sqlite3\sqlite3.c" />
+    <ClCompile Include="Product.cpp" />
     <ClCompile Include="TestApp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="App.h" />
     <ClInclude Include="Db.h" />
     <ClInclude Include="DbConnection.h" />
     <ClInclude Include="libs\sqlite3\config.h" />
     <ClInclude Include="libs\sqlite3\sqlite3.h" />
     <ClInclude Include="libs\sqlite3\sqlite3ext.h" />
+    <ClInclude Include="Product.h" />
+    <ClInclude Include="RequestDB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -112,6 +112,11 @@ namespace Db
 		return true;
 	}
 
+	bool ExecuteQuery(const char* sql, int (*callback)(void*, int, char**, char**), sqlite3* db, bool throwEx, int timeoutSec)
+	{
+		return LoadData(sql, db, callback, 0, throwEx, timeoutSec);
+	}
+
 	bool ExecuteQuery(const char* sql, sqlite3* db, bool throwEx, int timeoutSec)
 	{
 		return LoadData(sql, db, 0, 0, throwEx, timeoutSec);
